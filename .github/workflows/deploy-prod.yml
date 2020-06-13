@@ -10,14 +10,14 @@ on:
   #  types: [opened]
 
 env:
-  DOCKER_IMAGE_NAME: phuctan22101992-azure-ttt1
+  DOCKER_IMAGE_NAME: phuctan22101992-azure-ttt2
   IMAGE_REGISTRY_URL: docker.pkg.github.com
   #################################################
   ### USER PROVIDED VALUES ARE REQUIRED BELOW   ###
   #################################################
   #################################################
   ### REPLACE USERNAME WITH GH USERNAME         ###
-  AZURE_WEBAPP_NAME: phuctan22101992-ttt-app
+  AZURE_WEBAPP_NAME: phuctan22101992-ttt-app1
   #################################################
 
 jobs:
