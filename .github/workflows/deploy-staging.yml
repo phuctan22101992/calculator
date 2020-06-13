@@ -17,7 +17,7 @@ env:
   #################################################
   #################################################
   ### REPLACE USERNAME WITH GH USERNAME         ###
-  AZURE_WEBAPP_NAME: phuctan22101992-ttt-app
+  AZURE_WEBAPP_NAME: phuctan22101992-ttt-app1
   #################################################
 
 jobs:
