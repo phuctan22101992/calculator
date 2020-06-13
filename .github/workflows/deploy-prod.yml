@@ -10,7 +10,7 @@ on:
   #  types: [opened]
 
 env:
-  DOCKER_IMAGE_NAME: phuctan22101992-azure-ttt
+  DOCKER_IMAGE_NAME: phuctan22101992-azure-ttt1
   IMAGE_REGISTRY_URL: docker.pkg.github.com
   #################################################
   ### USER PROVIDED VALUES ARE REQUIRED BELOW   ###
