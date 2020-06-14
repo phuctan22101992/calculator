@@ -88,7 +88,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
-          deployid: ${{ steps.deploy.outputs.id }}
           #description: "The description to create. Restricted to 140 chars"
 
       #- name: Get the deplopyment ID
