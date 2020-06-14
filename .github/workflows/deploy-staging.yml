@@ -91,7 +91,7 @@ jobs:
           #description: "The description to create. Restricted to 140 chars"
 
       - name: Get the deplopyment ID
-        run: echo "The deployment ID was ${{ steps.deploy.outputs.id },${{ job.status }}"
+        run: echo "The deployment ID was ${{ steps.deploy.outputs.id }},${{ job.status }}"
         
       - name: Azure logout
         run: |
