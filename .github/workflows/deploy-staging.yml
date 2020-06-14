@@ -79,15 +79,33 @@ jobs:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
           images: ${{env.IMAGE_REGISTRY_URL}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{ github.sha }}
 
+      - name: Update deployment status (success)
+        if: success()
+        uses: chrnorm/deployment-status@releases/v1
+        with:
+          token: "${{ github.token }}"
+          target_url: http://phuctan22101992-testapp.azurewebsites.net #need update
+          state: "success"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+
+      - name: Update deployment status (failure)
+        if: failure()
+        uses: chrnorm/deployment-status@releases/v1
+        with:
+          token: "${{ github.token }}"
+          target_url: http://phuctan22101992-testapp.azurewebsites.net #need update
+          state: "failure"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+
       #- name: Create Github Deployment Status
         #uses: unacast/actions-github-deployment-status@0.2
         
-      - name: update deploy status
-        if: always()
-        uses: unacast/actions-github-deployment-status@0.2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          status: ${{ job.status }}
+      #- name: update deploy status
+        #if: always()
+        #uses: unacast/actions-github-deployment-status@0.2
+        #with:
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          #status: ${{ job.status }}
           #description: "The description to create. Restricted to 140 chars"
 
       #- name: Get the deplopyment ID
