@@ -79,8 +79,8 @@ jobs:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
           images: ${{env.IMAGE_REGISTRY_URL}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{ github.sha }}
 
-      - name: Create Github Deployment Status
-        uses: unacast/actions-github-deployment-status@0.2
+      #- name: Create Github Deployment Status
+        #uses: unacast/actions-github-deployment-status@0.2
         
       - name: update deploy status
         if: always()
